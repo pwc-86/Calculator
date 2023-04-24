@@ -1,0 +1,74 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    background: linear-gradient(to right,#2193b0, #6dd5ed);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.calculator{
+  width:25%;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: right;
+  box-shadow: 7px 7px 7px rgba(0,0,0,0.5);
+  
+}
+.display{
+  width:100%; 
+  height:20vh;
+  background: black;
+  color: white;
+}
+.input{
+  display: grid;/*this puts every element in a row*/
+  grid-template-columns: 1fr 1fr 1fr 1fr; /*this makes it 4 columns/row*/
+}
+button{
+  border: none; 
+  padding: 1.6rem;
+  background-color: white;
+  font-size: 22px;
+  transition: all 0.3s ease-in-out;  
+}
+button:hover{
+  font-weight: bold;
+  background-color: grey;
+}
+.result{
+  font-size: 28px;
+  padding: 25px;
+}
+.output{
+    font-size: 18px;
+    padding: 25px;
+}
+
+/*The animation is created by gradually changing from one set of CSS styles to another.
+During the animation, you can change the set of CSS styles many times.
+Specify when the style change will happen in percent, or with the keywords "from" and "to", which is the same as 0% and 100%. 0% is the beginning of the animation, 100% is when the animation is complete.
+Tip: For best browser support, you should always define both the 0% and the 100% selectors.
+Note: Use the animation properties to control the appearance of the animation (found in JS), and also to bind the animation to selectors.*/
+
+@keyframes big{ 
+    0%{
+        font-size: 18px;
+    }
+    100%{
+        font-size: 30px;
+    }
+}
+
+@keyframes small{
+    0%{
+        font-size: 28px;
+    }
+    100%{
+        font-size: 18px;
+    }
+}
+
